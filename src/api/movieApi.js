@@ -1,24 +1,32 @@
 import axios from "axios";
-import * as config from "./movieConfig";
+import {
+  MOVIE_GENRES,
+  BASE_URL,
+  GENRES_URL,
+  MOVIE_WITH_GENRE_URL,
+} from "./movieConfig";
 
-const fetchMovies = () => {
-  return Promise.all(
-    config.MOVIE_GENRES.map((genre) =>
-      axios.get(config.MOVIE_WITH_GENRE_URL + genre[0])
-    )
-  ).then((results) => {
-    return results;
-  });
+const fetchMovies = async () => {
+  const data = await Promise.all(
+    MOVIE_GENRES.map(async (genre) => {
+      const response = await axios.get(MOVIE_WITH_GENRE_URL + genre.code);
+      return {
+        genre: genre.name,
+        movies: response.data.results,
+      };
+    })
+  );
+  return data;
 };
 
 const fetchMovie = (id) => {
   return axios
-    .get(`${config.BASE_URL}&with_genres=${id}`)
+    .get(`${BASE_URL}&with_genres=${id}`)
     .then((result) => result.data.results);
 };
 
 const fetchGenres = () => {
-  return axios.get(config.GENRES_URL).then((result) => result.data.genres);
+  return axios.get(GENRES_URL).then((result) => result.data.genres);
 };
 
 export { fetchMovies, fetchMovie, fetchGenres };
