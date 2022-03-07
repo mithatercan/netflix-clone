@@ -1,0 +1,117 @@
+header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10vh;
+  background-color: transparent;
+  z-index: 10;
+  padding: 0 1rem;
+  transition: background-color 0.3s ease-in-out;
+  @media screen and (min-width: 1024px) {
+    position: fixed;
+  }
+  &.scrolled {
+    background-color: #000;
+  }
+  nav {
+    height: 100%;
+    .navbar-left-side {
+      // logo
+      img {
+        width: 5rem;
+        margin-right: 1rem;
+      }
+      ul {
+        display: none;
+        font-size: 0.9rem;
+        font-weight: 100;
+        li {
+          margin-left: 1rem;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        @media screen and (min-width: 1024px) {
+          display: flex;
+        }
+      }
+      .burger-menu {
+        svg {
+          margin-right: 1rem;
+          font-size: 1.8rem;
+          @media screen and (min-width: 1024px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .navbar-right-side {
+      .mobile-view-icons {
+        input {
+          width: 7rem;
+          background-color: rgb(26, 25, 25);
+          padding: 0.3rem 0.5rem;
+          font-size: 1rem;
+          border: 1px solid gray;
+          @media screen and (min-width: 1024px) {
+            display: none;
+          }
+        }
+      }
+
+      .desktop-view-icons {
+        display: none;
+
+        .icon {
+          margin-left: 1rem;
+          svg {
+            font-size: 1.5rem;
+          }
+        }
+
+        .search {
+          input {
+            padding: 0.5rem 0.5rem;
+            width: 0rem;
+            visibility: hidden;
+            font-size: 0.8rem;
+            transition: width 0.3s ease-in-out;
+            position: absolute;
+          }
+
+          &.opened {
+            background-color: rgb(26, 25, 25);
+            border: 1px solid gray;
+            padding: 0 0.5rem;
+            input {
+              position: relative;
+              visibility: visible;
+              width: 15rem;
+              display: block;
+            }
+          }
+        }
+        .avatar {
+          width: 1.5rem;
+          height: 1.5rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        @media screen and (min-width: 1024px) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 3rem;
+  }
+}
