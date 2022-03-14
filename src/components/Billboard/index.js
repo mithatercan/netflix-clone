@@ -7,14 +7,14 @@ const Billboard = () => {
   return (
     <div className='billboard'>
       <img
-        src='https://occ-0-4609-2774.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABTqoOs1JWzL_FGHKxzpLTeFJbj-Tae14BGPzWXh0p13w73EMXo8hTf3AduGMB7xtVp9GaTslXRm7DkXdlZ134Ftqnl_Z.webp?r=2d3'
+        src='billboard-hero.png'
         alt='billboard'
         className='billboard-hero-image'
       />
       <div className='billboard-content df f-ai-c'>
         <div className='billboard-content-wrapper'>
           <img
-            src='https://occ-0-4609-2774.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABcgq5tyQQ-MYQF_ZGuJR7EptZ6dE3zHP2rl4CWPc3_7Z6kRPHDaicpEJ5dLjxmrEXhOOofYWPUKtT3ouE4f-KLNMiMvZDmKpxSGL9_8VWNxxWwNCHNenZEzT8QRfZKOrLAhGzTFO-M4FKFdIqG2C40AlWtsCYGaesPWCIJxB34td.webp?r=d45'
+            src='billboard-thumbnail.png'
             alt='thumbnail'
             className='billboard-content-thumbnail'
           />
