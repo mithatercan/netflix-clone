@@ -1,13 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomeView from "../views/HomeView";
-import ContentView from "../views/ContentView";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import HomeView from "../views/Home";
 
 const index = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<HomeView />} />
-        <Route path='/science' element={<ContentView />} />
+        <Route path='/' element={<Navigate to='/browse' />} />
+        <Route path='/browse' element={<HomeView />} />
       </Routes>
     </Router>
   );
