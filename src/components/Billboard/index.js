@@ -1,6 +1,6 @@
 import React from "react";
-import { ImPlay3 } from "react-icons/im";
-import { AiOutlineInfoCircle } from "react-icons/ai";
+import PlayButton from "./PlayButton";
+import InfoButton from "./InfoButton";
 import "./billboard.scss";
 
 const Billboard = () => {
@@ -24,14 +24,8 @@ const Billboard = () => {
             the cost.
           </p>
           <div className='billboard-content-buttons df f-ai-c'>
-            <button className='play-button df f-ai-c'>
-              <ImPlay3 />
-              Play
-            </button>
-            <button className='info-button df f-ai-c'>
-              <AiOutlineInfoCircle />
-              More info
-            </button>
+            <PlayButton />
+            <InfoButton />
           </div>
         </div>
       </div>
