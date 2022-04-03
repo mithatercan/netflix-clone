@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./box-info.scss";
 const BoxInfo = ({ vote_average, release_date, title }) => {
   return (
-    <div className='box-inner-info '>
+    <div className='info '>
       <div className='df f-ai-c f-jc-sb'>
         <div className='vote-average'>
           {vote_average ? `${Math.floor(vote_average * 10)}% Match` : "New"}

@@ -3,7 +3,7 @@ import { ImPlay3 } from "react-icons/im";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BiLike, BiDislike } from "react-icons/bi";
 import { FiChevronDown } from "react-icons/fi";
-
+import "./box-buttons.scss";
 const BoxButtons = () => {
   return (
     <div className='box-inner-buttons df f-ai-c  f-jc-sb'>
