@@ -1,9 +1,10 @@
 import axios from "axios";
 import {
   MOVIE_GENRES,
-  BASE_URL,
   GENRES_URL,
   MOVIE_WITH_GENRE_URL,
+  MOVIE_URL,
+  API_QUERY,
 } from "./movieConfig";
 
 const fetchMovies = async () => {
@@ -19,14 +20,15 @@ const fetchMovies = async () => {
   return data;
 };
 
-const fetchMovie = (id) => {
-  return axios
-    .get(`${BASE_URL}&with_genres=${id}`)
-    .then((result) => result.data.results);
+const fetchMovie = async (id) => {
+  const response = await axios.get(`${MOVIE_URL + id + API_QUERY}`);
+  console.log(response.data);
+  return response.data;
 };
 
-const fetchGenres = () => {
-  return axios.get(GENRES_URL).then((result) => result.data.genres);
+const fetchGenres = async () => {
+  const reponse = await axios.get(GENRES_URL);
+  return reponse.data.genres;
 };
 
 export { fetchMovies, fetchMovie, fetchGenres };

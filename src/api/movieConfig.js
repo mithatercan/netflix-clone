@@ -73,6 +73,8 @@ const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}
 // MOVIE
 const MOVIE_URL = `https://api.themoviedb.org/3/movie/`;
 
+const API_QUERY = `?api_key=${API_KEY}&language=en-US&append_to_response=images&include_image_language=null,en`;
+
 export {
   API_KEY,
   BASE_URL,
@@ -82,4 +84,5 @@ export {
   MOVIE_URL,
   IMAGE_URL,
   SEARCH_URL,
+  API_QUERY,
 };
