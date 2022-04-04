@@ -5,7 +5,8 @@ import { v4 as uuid } from "uuid";
 import SingleMovie from "../../components/SingleMovie";
 import Slider from "../../components/Slider";
 import Billboard from "../../components/Billboard";
-import "./home.scss";
+import Spinner from "../../components/Spinner";
+import "./home-view.scss";
 
 const HomeView = () => {
   // redux
@@ -19,10 +20,14 @@ const HomeView = () => {
   return (
     <div>
       <Billboard />
-      {movies &&
+
+      {movies.length !== 0 ? (
         movies.map((movie) => (
           <Slider key={uuid()} genre={movie.genre} movies={movie.movies} />
-        ))}
+        ))
+      ) : (
+        <Spinner />
+      )}
 
       <SingleMovie />
     </div>
