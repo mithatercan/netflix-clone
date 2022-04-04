@@ -15,19 +15,25 @@ export const getMovies = createAsyncThunk("movie/getMovies", async () => {
 
 export const getMovie = createAsyncThunk("movie/getMovie", async (id) => {
   const movie = await fetchMovie(id);
+
   return movie;
 });
 
 const initialState = {
   movies: [],
   genres: [],
-  movie: {},
+  movie: null,
 };
 
 //creates a slice of the store
 const moviSlice = createSlice({
   name: "movie",
   initialState: initialState,
+  reducers: {
+    clearMovie: (state) => {
+      state.movie = null;
+    },
+  },
   extraReducers: {
     [getGenres.fulfilled]: (state, action) => {
       state.genres = action.payload;
@@ -41,4 +47,5 @@ const moviSlice = createSlice({
   },
 });
 
+export const { clearMovie } = moviSlice.actions;
 export default moviSlice.reducer;
