@@ -6,7 +6,6 @@ import "./box.scss";
 
 const Box = ({ movie }) => {
   const navigate = useNavigate();
-  // get id query
 
   const handleClick = () => {
     navigate("/browse?id=" + movie.id);

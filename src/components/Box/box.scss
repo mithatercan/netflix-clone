@@ -34,32 +34,6 @@
       transition: 0.3s transform ease-in-out, 0.1s opacity ease-in-out,
         height 0.2s ease-out;
       color: #fff;
-      &-buttons {
-        svg {
-          font-size: 1.9rem;
-          border: 1px solid rgb(212, 212, 212);
-          border-radius: 50%;
-          padding: 0.2em;
-          margin-right: 0.3rem;
-          transition: 0.2s;
-          &:hover {
-            cursor: pointer;
-            background-color: #fff;
-            color: #141414;
-          }
-        }
-      }
-      &-info {
-        font-size: 0.8rem;
-        margin-top: 1rem;
-        .vote-average {
-          color: #3aa555;
-          font-weight: 900;
-        }
-        .title {
-          margin-top: 0.5rem;
-        }
-      }
     }
 
     @media screen and (min-width: 481px) {
