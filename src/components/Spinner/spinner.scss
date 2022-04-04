@@ -1,0 +1,19 @@
+.spinner {
+  position: absolute;
+  left: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.2rem solid rgb(255, 0, 0);
+  border-left: 0.2rem solid transparent;
+  animation: spin 1s linear infinite;
+  transform: translateX(-50%);
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
