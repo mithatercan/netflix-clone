@@ -8,7 +8,7 @@ const LoginView = () => {
     navigate("/browse");
   };
   return (
-    <div className='login-view'>
+    <div className='login-view df f-jc-c f-ai-c'>
       <header>
         <img src='logo.png' alt='logo' />
       </header>
