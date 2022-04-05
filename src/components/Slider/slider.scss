@@ -26,6 +26,7 @@
     height: 100%;
     z-index: 9;
     cursor: pointer;
+    visibility: visible;
     transition: all 0.1s ease-in-out;
     &:hover {
       font-size: 3rem;
@@ -39,6 +40,9 @@
     &.next-button {
       right: 3rem;
     }
+  }
+  @media screen and (min-width: 1024px) {
+    visibility: visible;
   }
 }
 
