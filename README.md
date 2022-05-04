@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Netflix Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Netflix clone app built on ReactJS. I used [TMDB API](https://www.themoviedb.org/documentation/api) to fetch movies. There is login page but it doesn't require any authentication. If you want to check the app, you can go to [Live Demo](https://netflix-clone-app-react-js.netlify.app/login).
 
-## Available Scripts
+![](https://user-images.githubusercontent.com/71825314/166804981-c6e73a3d-3a84-4fb9-adef-e38fbf7b3dca.png)
 
-In the project directory, you can run:
+![](https://user-images.githubusercontent.com/71825314/166805336-993ca061-bdae-49ed-a094-7c1c14c0c05b.png)
 
-### `npm start`
+![](https://user-images.githubusercontent.com/71825314/166805559-36219056-6eb5-4015-a807-363d64a9b9e2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+First of all, if you want to run this app on your local machine, then go to [TMDB](https://www.themoviedb.org/) to get your api key.
 
-### `npm test`
+```bash
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ git clone https://github.com/mithatercan/netflix-clone.git
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After cloning the repo, you should install the dependencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+And finally create `.env` file and add your api key there.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```env
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+REACT_APP_API_KEY =
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+# Done 🤩
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You are done with the setup. You can run the app on dev mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
 
-### Code Splitting
+ npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+The default port is 3000. The app will be running at localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Contribution
 
-### Making a Progressive Web App
+If you want to contribute to the app, pull requests are welcome.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
